@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: order-service
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:mydb;MODE=MySQL;NON_KEYWORDS=USER,ORDER
+    username: root
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  cloud:
+    zookeeper:
+      discovery:
+        enabled: true
+      connect-string: localhost:2181
