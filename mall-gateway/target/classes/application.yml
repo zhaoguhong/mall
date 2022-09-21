@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: mall-gateway
+  cloud:
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          enabled: true
+    zookeeper:
+      discovery:
+        enabled: true
+      connect-string: localhost:2181
+server:
+  port: 9000
